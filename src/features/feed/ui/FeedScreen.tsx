@@ -4,6 +4,7 @@ import { FlatList, ListRenderItem, RefreshControl, StyleSheet, View } from 'reac
 
 import type { Post } from '@/shared/api/types';
 import { tokens } from '@/shared/config/tokens';
+import { NothingFoundState } from '@/shared/ui/NothingFoundState';
 
 import { feedUiStore } from '../model/feedUiStore';
 import { usePrefetchFeedImages } from '../model/usePrefetchFeedImages';
@@ -88,6 +89,7 @@ export const FeedScreen = observer(function FeedScreen() {
         initialNumToRender={5}
         maxToRenderPerBatch={6}
         windowSize={7}
+        ListEmptyComponent={<NothingFoundState onHomePress={() => refetch()} />}
         ListFooterComponent={
           <FeedFooter hasError={Boolean(error && posts.length > 0)} isLoadingMore={isFetchingNextPage} />
         }
