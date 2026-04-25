@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Mecenate Feed",
+    "slug": "mecenate-feed",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#eef2f6"
+    },
+    "scheme": "mecenate-feed",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "icon": "./assets/icon.png",
+      "supportsTablet": true
+    },
+    "android": {
+      "icon": "./assets/icon.png",
+      "edgeToEdgeEnabled": true,
+      "softwareKeyboardLayoutMode": "resize",
+      "package": "com.mecenate.feedtest"
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
